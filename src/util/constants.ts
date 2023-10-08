@@ -1,6 +1,5 @@
 function env(k: string) {
     const v = process.env[k]
-    console.log(v)
     if(!v) {
         throw new Error(`Missing env var: ${k}`)
     }
