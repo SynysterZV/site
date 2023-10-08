@@ -12,7 +12,6 @@ import Script from 'next/script'
 import Providers from '@/components/Providers'
 import ThemeSwitch from '@/components/ThemeToggle'
 import Routes from '@/components/Nav'
-import Particles from '@/components/Particles'
 
 const font = Inter({ subsets: ["latin"] })
 

@@ -30,7 +30,7 @@ export default function ThemeSwitch() {
         return () => {
             window.removeEventListener("keydown", handler)
         }
-    }, [checked, setChecked])
+    }, [checked, setChecked, set])
 
     if(!mounted) return
 
