@@ -1,0 +1,14 @@
+services:
+  redis:
+    container_name: redis
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: redis-server --requirepass 6d733e2e3be00bb9e4aab07e8c3508aef05cb4cec20e1175d75f4a9eb618d632
+    ports:
+      - 6379:6379
+    environment:
+      REDISCLI_AUTH: "6d733e2e3be00bb9e4aab07e8c3508aef05cb4cec20e1175d75f4a9eb618d632"
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping"]
+      interval: 10s
+      timeout: 5s
